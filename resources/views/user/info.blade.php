@@ -63,7 +63,11 @@
             <div class="profile">
             </div>
             <div class="person">
-                <img src="../people/person1.jpg" alt="">
+                @if(empty($user->profile->image))
+                <img src="{{asset('image/image4.jpg')}}" class="image">
+                @else
+                <img src="{{asset('uploads/')}}/{{$user->profile->image}}" class="image">
+                @endif
             </div>
             <form>
             <ul class="information">

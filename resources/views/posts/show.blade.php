@@ -7,6 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name=description content="{{$posts['particular_post']->meta}}">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Merriweather|PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="{{ asset('/css/main-info.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <link rel="stylesheet" href="{{ asset('/css/swiper.css') }}">
@@ -21,7 +23,7 @@
         <label for="chk" class="show-menu-btn">
             <i class="fas fa-bars" style="color: white;"></i>
         </label>
-        <a href="#"><span class="logo">Dark Code</span></a>
+        <a href="#"><h1 class="logo">NightLife Tokyo</h1></a>
         <button type="submit" class="search-btn-sp">
             <i class="fas fa-search "></i>
         </button>

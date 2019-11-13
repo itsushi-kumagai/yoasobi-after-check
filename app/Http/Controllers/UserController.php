@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use App\Profile;
-use Illuminate\Support\Facades\Storage;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -45,26 +45,17 @@ class UserController extends Controller
      */
     public function store(Request $request) {
         $user_id = auth()->user()->id;
-        // if($request->hasfile('image')){
-        //     $file = $request->file('image');
-        //     $ext = $file->getClientOriginalExtension();
-        //     $filename = time().'.'.$ext;
-        //     $file->move('uploads/', $filename);
-        //     Profile::updateOrCreate(
-        //         ['user_id' => $user_id], // search requirements
-        //         [   
-        //             'image'=>$filename
-        //         ]
-        //     );
-        // }
-        $data = $request->only(['user_id','image', 'gender', 'country', 'bod', 'instagram', 'description']);
-        if($request->hasFile('image')){
-            //upload it
-            $image = $request->image->store('profile');
-            //delete old image
-            //$post->deleteImage();
-        
-            $data['image'] = $image;
+        if($request->hasfile('image')){
+            $file = $request->file('image');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time().'.'.$ext;
+            $file->move('uploads/', $filename);
+            Profile::updateOrCreate(
+                ['user_id' => $user_id], // search requirements
+                [   
+                    'image'=>$filename
+                ]
+            );
         }
 
         // Get current image of user, then delete it

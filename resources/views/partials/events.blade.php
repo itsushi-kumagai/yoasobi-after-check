@@ -1,5 +1,5 @@
 <section  id="app">
-    <h2>Featured events</h2>
+    <h2 class="featured">Featured Events</h2>
     <div class="swiper-container">
     <div class="swiper-wrapper">
             @foreach($posts as $post)
@@ -13,7 +13,7 @@
                             <div class="event-name">
                                 <div class="title">
                                     <h1><a href="{{ route('posts.show', [$post->id,$post->slug]) }}">
-                                        {{ str_limit($post->title, 20) }}
+                                        {{ str_limit($post->title, 18) }}
                                     </a></h1>
                                 </div>
                                 <div class="event-button">

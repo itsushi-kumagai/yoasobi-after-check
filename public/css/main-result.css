@@ -48,10 +48,8 @@
 }
 
 .logo {
-  font-size: 1.2em;
   line-height: 50px;
   float: left;
-  text-transform: uppercase;
   color: #fff;
 }
 
@@ -200,7 +198,6 @@
 
 .menu a {
   color: #fff;
-  text-transform: uppercase;
   text-decoration: none;
   padding: 0 10px;
   -webkit-transition: 0.4s;

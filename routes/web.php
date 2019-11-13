@@ -51,8 +51,6 @@ Route::middleware(['auth'])->group(function(){
 });
 
 
-
-
 Route::get('results/tokyo', 'ResultsController@index')->name('posts.result');
 Route::get('results/tokyo/shibuya/{post}/{slug}', 'ResultsController@show')->name('posts.show');
 

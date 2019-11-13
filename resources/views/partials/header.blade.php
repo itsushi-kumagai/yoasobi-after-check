@@ -1,7 +1,7 @@
 <div class="container">
 <section id="header-container">
         <div id="header" >
-        <a href="#"><h1 class="logo">Dark Code</h1></a>
+            <a href="#"><h1 class="logo">Tokyo NeverSleeps</h1></a>
             <input type="checkbox" id="chk">
             <label for="chk" class="show-menu-btn">
                 <i class="fas fa-bars" style="color: white;"></i>
@@ -84,11 +84,11 @@
     <div id="sidebarSearch">
         
         <form action="{{ route('posts.result') }}"  method="GET">
-            <div class="search-erea">
+            <div class="search-area">
             <div class="search-title">Enter the name of event</div>
                 <input type="text" class="search_text" name="description">
             </div>
-            <div class="search-erea">
+            <div class="search-area">
                 <div class="search-title">Categories</div>
                 <div class="Category-list">
                     <select name="category_id"  class="Genre">
@@ -99,7 +99,7 @@
                     </select>
                 </div>
             </div>
-            <div class="search-erea">
+            <div class="search-area">
                 <div class="search-title">Day</div>
                 <input type="text" id="date_search" class="Day-box" name="date" >
             </div>
@@ -109,7 +109,7 @@
         </div>
     </form>
 
-        <div class="seach-erea">
+        <div class="seach-area">
             <form action="{{ route('posts.result') }}" class="search" method="GET">
                 <input type="text" name="description" class="search_text" placeholder="Enter the key words">
                 <select name="category_id"  class="Genre">
@@ -129,9 +129,9 @@
 
 <div class="background-img"> 
 <div class="background-img-msk">
-<h1 class="first-view-text">Lorem ipsum dolor</h1> 
+<h1 class="first-view-text" >Night Life Tokyo</h1> 
 <div class="main_search">
-    <div class="seach-erea">
+    <div class="seach-area">
         <form action="{{ route('posts.result') }}" class="search" method="GET">
             <input type="text" name="description" class="search_text" placeholder="Enter the key words">
             <select name="category_id"  class="Genre">

@@ -20,7 +20,7 @@
                 <label for="chk" class="show-menu-btn">
                     <i class="fas fa-bars" style="color: white;"></i>
                 </label>
-                <a href="#"><span class="logo">Dark Code</span></a>
+                <a href="#"><h1 class="logo">NightLife Tokyo</h1></a>
                 <button type="submit" class="search-btn-sp">
                     <i class="fas fa-search "></i>
                 </button>
@@ -93,9 +93,7 @@
                 @endif
             </ul>
         </div>
-       
-       
-            </div>
+     </div>
     </section>
             <div class="content">
                 <div class="userinfo">
@@ -163,7 +161,6 @@
                 
             </div>
         </div>
-
         <section class="saved-container">
             <h2>Saved Events</h2>
             <div class="swiper-container" id="app">

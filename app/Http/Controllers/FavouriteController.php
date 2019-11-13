@@ -14,6 +14,12 @@ class FavouriteController extends Controller
         return redirect()->back();
     }
 
+    // public function save($id){
+    //     $postId = Post::find($id);
+    //     $postId->favourites()->attach(auth()->user()->id);//情報を入れる
+    //     return view('profile/user', compact('postId'));
+    // }
+
     public function unSavePost($id){
         $postId = Post::find($id);
         $postId->favourites()->detach(auth()->user()->id);//情報をデリートする

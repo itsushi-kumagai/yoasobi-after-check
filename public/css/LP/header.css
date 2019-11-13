@@ -1,3 +1,5 @@
+
+
 #header-container {
   position: fixed;
   width: 100%;
@@ -29,7 +31,6 @@
 .logo {
   line-height: 50px;
   float: left;
-  text-transform: uppercase;
   color: #fff;
 }
 
@@ -44,7 +45,6 @@
 
 .menu a {
   color: #fff;
-  text-transform: uppercase;
   text-decoration: none;
   padding: 0 15px;
   -webkit-transition: 0.4s;
