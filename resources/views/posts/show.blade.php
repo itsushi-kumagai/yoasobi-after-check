@@ -23,7 +23,7 @@
         <label for="chk" class="show-menu-btn">
             <i class="fas fa-bars" style="color: white;"></i>
         </label>
-        <a href="#"><h1 class="logo">NightLife Tokyo</h1></a>
+        <a href="{{ route('home.show') }}"><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
         <button type="submit" class="search-btn-sp">
             <i class="fas fa-search "></i>
         </button>
@@ -60,11 +60,11 @@
             @if(Auth::check())
                 @if(empty(Auth::user()->profile->image))
                     <a href="/user/profile">
-                    <img src="{{asset('image/image3.jpg')}}" class="image-preview__image">
+                    <img src="{{asset('avatar/avatar.png')}}" class="image-preview__image" alt="avatar">
                     </a>
                     @else
                     <a href="/user/profile">
-                    <img src="{{asset('uploads/')}}/{{Auth::user()->profile->image}}" class="image-preview__image">
+                    <img src="{{asset('uploads/')}}/{{Auth::user()->profile->image}}" class="image-preview__image" alt="profile image">
                     </a>
                 @endif
             @else
@@ -111,6 +111,7 @@
                     @endif
                 </ul>
             </div>
+            <a href="{{ route('home.show') }}" ><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
             <input type="checkbox" class="openSidebarSearch" id="openSidebarSearch">
             <label for="openSidebarSearch" class="sidebarIconSearch">
             <i class="fas fa-search search_icon"></i>
@@ -246,8 +247,18 @@
 </section>
         </div>
         </form>
-        <div class="footer">
-        </div>
+        <footer>
+            <div class="footer">
+                <span class="follow">Follow Us Now !! #yoasobi</span>
+                <div class="social">
+                    <a href="" target="_blank"><img src="{{asset('social link/001-facebook.svg')}}" width="32" height="32" alt="facebook link"></a>
+                    <a href="" target="_blank"><img src="{{asset('social link/011-instagram.svg')}}" width="32" height="32" alt="instagram link"></a>
+                    <a href="" target="_blank"><img src="{{asset('social link/013-twitter-1.svg')}}" width="32" height="32" alt="twitter link"></a>
+                </div>
+                <span class="terms"><a href="{{ route('terms.show') }}">Terms of service</a></span>
+                    <small class="copyright">Copyright 2019- yoasobi All Rights Reserved.</small>
+            </div>
+        </footer>
     </div>
         <script src="{{ mix('/js/app.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('/js/swiper.min.js') }}">

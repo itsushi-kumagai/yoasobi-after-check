@@ -22,5 +22,9 @@ flatpickr("#date-box", {
     minDate: "today"
 });
 
+flatpickr("#date_search", {
+    minDate: "today"
+});
+
 
 

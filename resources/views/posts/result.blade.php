@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name=description content=ここにメタディスクリプションのテキストを記述>
+    <meta name=description content="Yoasobi Result page of night club events, concert events, bar events. 
+    Search upcoming events here. You must enjoy great nightlife in Japan.">
     <link rel="stylesheet" href="{{ asset('/css/main-result.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    
     <title>Result Page</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
         <label for="chk" class="show-menu-btn">
             <i class="fas fa-bars" style="color: white;"></i>
         </label>
-        <a href="#"><h1 class="logo">NightLife Tokyo</h1></a>
+        <a href="{{ route('home.show') }}""><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
         <button type="submit" class="search-btn-sp">
             <i class="fas fa-search "></i>
         </button>
@@ -58,11 +58,11 @@
             @if(Auth::check())
                 @if(empty(Auth::user()->profile->image))
                     <a href="/user/profile">
-                    <img src="{{asset('image/image3.jpg')}}" class="image-preview__image">
+                    <img src="{{asset('avatar/avatar.png')}}" class="image-preview__image" alt="avatar">
                     </a>
                     @else
                     <a href="/user/profile">
-                    <img src="{{asset('uploads/')}}/{{Auth::user()->profile->image}}" class="image-preview__image">
+                    <img src="{{asset('uploads/')}}/{{Auth::user()->profile->image}}" class="image-preview__image" alt="profile image">
                     </a>
                 @endif
             @else
@@ -109,6 +109,7 @@
         @endif
     </ul>
     </div>
+    <a href="{{ route('home.show') }}""><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
     <input type="checkbox" class="openSidebarSearch" id="openSidebarSearch">
     <label for="openSidebarSearch" class="sidebarIconSearch">
     <i class="fas fa-search search_icon"></i>
@@ -143,8 +144,6 @@
         </div>
     </section>
     <section id="app">
-
-    
         @if($posts->count() > 0)
         @foreach($posts as $post)
         <div class="results" >
@@ -178,22 +177,26 @@
                 </div>
             </div>
         </div>
-            
             @endforeach
         </section>
             {{ $posts->onEachSide(1)->appends($_GET)->links() }}
-            
             @else
             <h3 class="no-results" ><nobr>No Results To Show</nobr></h3>
             @endif
+        </div>    
+    </div>  
+    <footer>
+        <div class="footer">
+            <span class="follow">Follow Us Now !! #yoasobi</span>
+            <div class="social">
+                <a href="" target="_blank"><img src="{{asset('social link/001-facebook.svg')}}" width="32" height="32" alt="facebook link"></a>
+                <a href="" target="_blank"><img src="{{asset('social link/011-instagram.svg')}}" width="32" height="32" alt="instagram link"></a>
+                <a href="" target="_blank"><img src="{{asset('social link/013-twitter-1.svg')}}" width="32" height="32" alt="twitter link"></a>
+            </div>
+            <span class="terms"><a href="{{ route('terms.show') }}">Terms of service</a></span>
+                <small class="copyright">Copyright 2019- yoasobi All Rights Reserved.</small>
         </div>
-           
-            
-        </div>
-        {{-- {{ $posts->appends(Request::except('page'))->links() }} --}}
-    <div class="footer">
-        
-    </div>
+    </footer>
     <script src="{{ mix('/js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="{{ asset('/js/flatpickr.js') }}"></script>

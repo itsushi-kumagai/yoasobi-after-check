@@ -1,7 +1,7 @@
 <div class="container">
 <section id="header-container">
         <div id="header" >
-            <a href="#"><h1 class="logo">Tokyo NeverSleeps</h1></a>
+            <a href="{{ route('home.show') }}"><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
             <input type="checkbox" id="chk">
             <label for="chk" class="show-menu-btn">
                 <i class="fas fa-bars" style="color: white;"></i>
@@ -22,11 +22,11 @@
                 @if(Auth::check())
                     @if(empty(Auth::user()->profile->image))
                         <a href="/user/profile">
-                        <img src="{{asset('image/image3.jpg')}}" class="image-preview__image">
+                            <img src="{{asset('avatar/avatar.png')}}" class="image-preview__image" alt="avatar">
                         </a>
                         @else
                         <a href="/user/profile">
-                        <img src="{{asset('uploads/')}}/{{Auth::user()->profile->image}}" class="image-preview__image">
+                        <img src="{{asset('uploads/')}}/{{Auth::user()->profile->image}}" class="image-preview__image" alt="profile image">
                         </a>
                     @endif
                 @else
@@ -73,25 +73,21 @@
     </ul>
 </div>
 
-
-
-
+<a href="{{ route('home.show') }}"><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo-smartphone"></a>
 <input type="checkbox" class="openSidebarSearch" id="openSidebarSearch">
 <label for="openSidebarSearch" class="sidebarIconSearch">
 <i class="fas fa-search search_icon"></i>
 </label>
-
     <div id="sidebarSearch">
-        
         <form action="{{ route('posts.result') }}"  method="GET">
             <div class="search-area">
             <div class="search-title">Enter the name of event</div>
                 <input type="text" class="search_text" name="description">
             </div>
-            <div class="search-area">
+            <div class="search-erea">
                 <div class="search-title">Categories</div>
                 <div class="Category-list">
-                    <select name="category_id"  class="Genre">
+                    <select name="category_id" id="select" class="Genre">
                         <option value="" hidden>Category</option>
                         @foreach(App\Category::all() as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
@@ -129,7 +125,7 @@
 
 <div class="background-img"> 
 <div class="background-img-msk">
-<h1 class="first-view-text" >Night Life Tokyo</h1> 
+<h1 class="first-view-text" >Night Life in Japan</h1> 
 <div class="main_search">
     <div class="seach-area">
         <form action="{{ route('posts.result') }}" class="search" method="GET">

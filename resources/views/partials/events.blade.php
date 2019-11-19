@@ -1,5 +1,5 @@
 <section  id="app">
-    <h2 class="featured">Featured Events</h2>
+    <h2 class="featured">Upcoming Events</h2>
     <div class="swiper-container">
     <div class="swiper-wrapper">
             @foreach($posts as $post)

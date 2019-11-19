@@ -1,4 +1,8 @@
-
+.logo {
+  height: 50px;
+  float: left;
+  color: #fff;
+}
 
 .authcomment {
     font-size: 14px;
@@ -58,8 +62,8 @@
 }
 
 .footer {
-  margin-top: 10rem;
-  height: 40vh;
+  margin-top: 10vh;
+  height: 50vh;
   background-color: #2D2524;
 }
 
@@ -77,11 +81,6 @@
   transition: top 0.7s;
 }
 
-.logo {
-  line-height: 50px;
-  float: left;
-  color: #fff;
-}
 
 .login {
   -webkit-box-align: center;
@@ -539,6 +538,36 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.follow {
+  color: white;
+  font-size: 24px;
+  margin-left: 3rem;
+}
+
+.social {
+  margin-left: 4rem;
+}
+
+.social img {
+  margin: 0.5rem;
+}
+
+.terms a {
+  color: white;
+  text-decoration: none;
+  float: right;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  font-size: 12px;
+}
+
+small {
+  justify-content: center;
+  display: flex;
+  color: white;
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */
 
 /*.content {
@@ -554,17 +583,28 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 1024px) {
+  .footer {
+    height: 33vh;
+    width: 100%;
+    background-color: #2D2524;
+  }
+}
 
 @media screen and (max-width: 767px) {
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 173px;
+  }
+  
+  .footer {
+    height: 50vh;
+    width: 100%;
+    background-color: #2D2524;
+  }
+
   .event-title h1{
     font-size: 26px;
   }
@@ -999,6 +1039,26 @@ a {
     #select {
       width: 60%;
     }
+
+    .follow {
+      margin-left: 1rem;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  
+    .social {
+      margin-left: 2rem;
+    }
+  
+    .terms a {
+      color: white;
+      text-decoration: none;
+      margin-left: 0.5rem;
+      margin-top: 8rem;
+      margin-bottom: 2rem;
+      font-size: 12px;
+    }
+  
 
 
 }

@@ -1,4 +1,8 @@
-
+.logo {
+  height: 50px;
+  float: left;
+  color: #fff;
+}
 
 #header-container {
   top: 0;
@@ -47,11 +51,12 @@
   transition: top 0.7s;
 }
 
-.logo {
-  line-height: 50px;
-  float: left;
-  color: #fff;
+.search-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 20px 0 10px;
 }
+
 
 .login {
   -webkit-box-align: center;
@@ -416,13 +421,43 @@
 
 * {
   margin: 0;
-  padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0
 }
 
 body {
   background-color: black;
 }
+
+.follow {
+  color: white;
+  font-size: 24px;
+  margin-left: 3rem;
+}
+
+.social {
+  margin-left: 4rem;
+}
+
+.social img {
+  margin: 0.5rem;
+}
+
+.terms a {
+  color: white;
+  text-decoration: none;
+  float: right;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  font-size: 12px;
+}
+
+small {
+  justify-content: center;
+  display: flex;
+  color: white;
+  width: 100%;
+}
+
 /*# sourceMappingURL=main.css.map */
 
 /*.content {
@@ -442,6 +477,12 @@ body {
 
 
 @media screen and (max-width: 767px) {
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 173px;
+  }
   
   .fav-icon-after {
     background-color: black;
@@ -874,4 +915,24 @@ body {
 .genre p{
         margin: 0 0 0 20px;
     }
+
+  .follow {
+    margin-left: 1rem;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .social {
+    margin-left: 2rem;
+  }
+
+  .terms a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    font-size: 12px;
+  }
+  
 }

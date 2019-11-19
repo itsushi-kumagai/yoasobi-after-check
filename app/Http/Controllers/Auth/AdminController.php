@@ -7,10 +7,10 @@ use App\Http\Controllers\Controller;
 use Auth;
 class AdminController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('guest:admin');
-    // }
+    public function __construct()
+    {
+        $this->middleware('guest:admin');
+    }
     
     
     /**

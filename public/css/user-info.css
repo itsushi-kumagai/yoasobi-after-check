@@ -886,4 +886,20 @@
   body {
     background-color: black;
   }
+
+  .terms a {
+    color: white;
+    text-decoration: none;
+    float: right;
+    margin-top: 15rem;
+    margin-bottom: 2rem;
+    font-size: 12px;
+  }
+  
+  small {
+    justify-content: center;
+    display: flex;
+    color: white;
+    width: 100%;
+  }
   /*# sourceMappingURL=main.css.map */

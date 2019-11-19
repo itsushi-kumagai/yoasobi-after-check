@@ -65,16 +65,6 @@ h2 {
 @import "./login";
 @import "./footer";
 @import "./footer";*/
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato', sans-serif;
-  font-weight: 100;
-}
-
-body {
-  background-color: black;
-}
 .card-information h1{
   font-size: 24px;
   font-weight: bold;
@@ -89,39 +79,8 @@ body {
 .card-information p{
   font-size: 15px;
 }
-h2 {
-  color: white;
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 20px;
-}
 
-.featured {
-  font-size: 29px;
-}
 
-h3 {
-  color: white;
-  font-size: 33px;
-}
-
-h4 {
-  color: white;
-  font-size: 23px;
-  margin-top: 2rem;
-}
-
-.face {
-  background: #305097;
-}
-
-.twi {
-  background: #00aced;
-}
-
-.goo {
-  background: #db4a39;
-}
 /*# sourceMappingURL=main.css.map */
 
 .showmore{
@@ -147,6 +106,13 @@ h4 {
 
   }
   @media screen and (max-width: 800px) {
+    .featured {
+      color: white;
+      text-align: center;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+      font-size: 25px;
+    }
     
     .card-info {
       color: white;

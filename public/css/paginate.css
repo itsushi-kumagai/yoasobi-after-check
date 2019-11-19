@@ -6,6 +6,11 @@
 
 ul {
     display: flex;
+    text-align: center;
+}
+
+.pagination {
+    justify-content: center;
 }
 
 li {

@@ -127,10 +127,8 @@
     </div>
     
     <a href="{{ route('posts.create') }}"><button btn="" class="add-btn">Add</button></a>
-    <div class="paginate" style="margin-left: 25rem;">
-
-    {{$posts->appends(Illuminate\Support\Facades\Input::except('page'))->links()}}
-    
+    <div class="page">
+        {{$posts->appends(Illuminate\Support\Facades\Input::except('page'))->links()}}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="{{ asset('/js/flatpickr.js') }}"></script>

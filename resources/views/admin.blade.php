@@ -47,14 +47,15 @@
                                     <a href="{{ route('categories.index') }}">Category</a>
                                     <a href="{{ route('tags.index') }}">Tags</a>
                                     <a href="{{ route('trashed-posts.index') }}">Bin</a>
-                                    <a href="{{ route('admin.logout') }}"
+                                    <a href="">Blog</a>
+                                    {{-- <a href="{{ route('admin.logout') }}"
                                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                                         Change Account
                                     </a>
                                     <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
-                                    </form>
+                                    </form> --}}
                                     </div>
                                 </div>
                             </div> 

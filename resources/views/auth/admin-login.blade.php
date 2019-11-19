@@ -50,9 +50,6 @@
                         <button type="submit" class="btn1">
                             {{ __('Login') }}
                         </button>
-                        <div class="btn2">
-                            <a href="{{ route('admin.register') }}">Register</a>
-                        </div>
                     </form>
                     </div>
                 </div>

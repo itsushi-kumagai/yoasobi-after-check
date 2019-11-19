@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name=description content=ここにメタディスクリプションのテキストを記述>
+    <meta name=description content="Yoasobi profile edit page, change your profile image, gender, country, age, instagram account and description.">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="{{ asset('/css/main-profile-create.css') }}">
@@ -18,7 +18,7 @@
                     <label for="chk" class="show-menu-btn">
                         <i class="fas fa-bars" style="color: white;"></i>
                     </label>
-                    <a href="#"><h1 class="logo">NightLife Tokyo</h1></a>
+                    <a href="{{ route('home.show') }}""><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
                     <button type="submit" class="search-btn-sp">
                         <i class="fas fa-search "></i>
                     </button>
@@ -40,7 +40,7 @@
                     @if(Auth::check())
                         @if(empty(Auth::user()->profile->image))
                             <a href="/user/profile">
-                            <img src="{{asset('image/image3.jpg')}}" class="image-preview__image">
+                            <img src="{{asset('avatar/avatar.png')}}" class="image-preview__image" alt="avatar">
                             </a>
                             @else
                             <a href="/user/profile">
@@ -91,6 +91,7 @@
                     @endif
                 </ul>
             </div>
+            <a href="{{ route('home.show') }}""><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
         </div>
         </section>
     <div class="content">
@@ -99,9 +100,9 @@
             </div>
             <div class="image-preview" id="imagePreview">
                 @if(empty(Auth::user()->profile->image))
-                <img src="{{asset('image/image1.jpg')}}" id="image-preview__image">
+                <img src="{{asset('avatar/avatar.png')}}" id="image-preview__image" alt="avatar">
                 @else
-                <img src="{{asset('uploads/')}}/{{Auth::user()->profile->image}}"  id="preview">
+                <img src="{{asset('uploads/')}}/{{Auth::user()->profile->image}}"  id="preview" alt="profile image">
                 @endif
         </div>
         
@@ -393,19 +394,25 @@
         </ul>
         
     </div>
-</form>
-            </div>
-            
-           
-        </div>
-    
+    </form>
+    </div> 
+</div>
+    <footer>
         <div class="footer">
-        
+            <span class="follow">Follow Us Now !! #yoasobi</span>
+            <div class="social">
+                <a href="" target="_blank"><img src="{{asset('social link/001-facebook.svg')}}" width="32" height="32" alt="facebook link"></a>
+                <a href="" target="_blank"><img src="{{asset('social link/011-instagram.svg')}}" width="32" height="32" alt="instagram link"></a>
+                <a href="" target="_blank"><img src="{{asset('social link/013-twitter-1.svg')}}" width="32" height="32" alt="twitter link"></a>
+            </div>
+            <span class="terms"><a href="{{ route('terms.show') }}">Terms of service</a></span>
+                <small class="copyright">Copyright 2019- yoasobi All Rights Reserved.</small>
         </div>
-        <script src="{{ asset('/js/previewImg.js') }}"></script>
-        <script src="{{ asset('/js/cleave.min.js') }}"></script>
-        <script src="{{ asset('/js/cleave.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-        <script src="{{ asset('/js/scroll.js') }}"></script>
+    </footer>
+    <script src="{{ asset('/js/previewImg.js') }}"></script>
+    <script src="{{ asset('/js/cleave.min.js') }}"></script>
+    <script src="{{ asset('/js/cleave.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{{ asset('/js/scroll.js') }}"></script>
 </body>
 </html>

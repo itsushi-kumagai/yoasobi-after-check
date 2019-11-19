@@ -75,5 +75,6 @@ Route::get('/login/facebook/callback', 'SocialAuthFacebookController@callback');
 Route::get('/login/google', 'SocialAuthGoogleController@redirect');
 Route::get('/login/google/callback', 'SocialAuthGoogleController@callback');
 
+Route::get('/termsofservice', 'TermsController@show')->name('terms.show');
 
 

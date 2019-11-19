@@ -90,7 +90,7 @@
   }
 
   .Description h3{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
   }
   .Description p{
@@ -110,44 +110,5 @@
 /*@import "./login";
 @import "./footer";
 @import "./footer";*/
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato', sans-serif;
-  font-weight: 100;
-}
 
-body {
-  background-color: black;
-}
-
-h2 {
-  color: white;
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 38px;
-}
-
-h3 {
-  color: white;
-  font-size: 33px;
-}
-
-h4 {
-  color: white;
-  font-size: 23px;
-  margin-top: 2rem;
-}
-
-.face {
-  background: #305097;
-}
-
-.twi {
-  background: #00aced;
-}
-
-.goo {
-  background: #db4a39;
-}
 /*# sourceMappingURL=main.css.map */
