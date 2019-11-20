@@ -38,7 +38,7 @@ Route::prefix('admin')->group(function(){
 });
 
 
-Route::get('/home', 'LandingPageController@index')->middleware('verified');
+//Route::get('/home', 'LandingPageController@index')->middleware('verified');
 Route::get('/', 'AuthLPController@index')->name('home.show');
 
 Route::get('/verified', 'HomeController@verify');

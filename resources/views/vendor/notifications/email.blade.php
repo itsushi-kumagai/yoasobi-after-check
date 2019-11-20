@@ -11,8 +11,12 @@
 </head>
 <body>
     <style>
+    .logo {
+      line-height: 30px;
+      margin-top: 2rem;
+  }
   .prompt {
-    height: 130vh;
+    height: 100vh;
     width: 0 auto;
     background: url(../../email/paul-fiedler-L-O36LuX9TY-unsplash.jpg);
     background-size: cover;
@@ -68,7 +72,7 @@
   .btn1 {
     color: #ffffff;
     background: #0FCC41;
-    margin-top: 2rem;
+    margin-left: 3rem;
     height: 30px;
     width: 200px;
     border: none;
@@ -83,27 +87,41 @@
     text-decoration: none;
   }
   
-  .footer-area {
-    color: black;
-    position: absolute;
-    height: 50px;
-    width: 90%;
-    border-top: solid 1px #000000;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    margin-top: 3rem;
+  .footer {
+    height: 55vh;
+    width: 100%;
+    background-color: #2D2524;
   }
+
+.follow {
+  color: white;
+  font-size: 24px;
+  margin-left: 3rem;
+}
+
+.social {
+  margin-left: 4rem;
+}
+
+.social img {
+  margin: 0.5rem;
+}
+
+.terms a {
+  color: white;
+  text-decoration: none;
+  float: right;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  font-size: 12px;
+}
+
+small {
+  justify-content: center;
+  display: flex;
+  color: white;
+  width: 100%;
+}
   
   @media screen and (max-width: 1030px) {
     .prompt-inner h1 {
@@ -120,6 +138,12 @@
       height: 60rem;
       margin-top: 30rem;
     }
+
+    .footer {
+      height: 40vh;
+      width: 100%;
+      background-color: #2D2524;
+  }
   }
   
   @media screen and (max-width: 766px) {
@@ -145,6 +169,32 @@
       margin-top: 2.0rem;
       height: 20px;
     }
+
+    .footer {
+      height: 40vh;
+      width: 100%;
+      background-color: #2D2524;
+  }
+
+  .follow {
+    margin-left: 1rem;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .social {
+    margin-left: 2rem;
+  }
+
+  .terms a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    font-size: 12px;
+  }
+  
   }
   
   * {
@@ -159,17 +209,6 @@
     background: #000000;
   }
   
-  .face {
-    background: #305097;
-  }
-  
-  .twi {
-    background: #00aced;
-  }
-  
-  .goo {
-    background: #db4a39;
-  }
   /*# sourceMappingURL=main.css.map */
     </style>
      <section>
@@ -179,14 +218,23 @@
                   <h1>Welcome</h1>
                   <h2>Confirm your email address</h2>
                   <p>Please click the button below to confirm your email address.</p>
+                  <img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo">
                   <a href="http://127.0.0.1:8000" class="btn1">Confirm email</a>
               </div> 
+              
           </div>
-          <footer>
-            <div class="footer-area">@2019 DARK CODE</div>
-        </footer>     
+          
       </div>
   </section>
-
+  <div class="footer">
+      <span class="follow">Follow Us Now !! #yoasobi</span>
+      <div class="social">
+          <a href="" target="_blank"><img src="{{asset('social link/001-facebook.svg')}}" width="32" height="32" alt="facebook link"></a>
+          <a href="" target="_blank"><img src="{{asset('social link/011-instagram.svg')}}" width="32" height="32" alt="instagram link"></a>
+          <a href="" target="_blank"><img src="{{asset('social link/013-twitter-1.svg')}}" width="32" height="32" alt="twitter link"></a>
+      </div>
+      <span class="terms"><a href="{{ route('terms.show') }}">Terms of service</a></span>
+          <small class="copyright">Copyright 2019- yoasobi All Rights Reserved.</small>
+  </div>
 </body>
 </html>

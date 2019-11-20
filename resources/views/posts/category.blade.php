@@ -18,7 +18,7 @@
                         <label for="chk" class="show-menu-btn">
                             <i class="fas fa-bars" style="color: white;"></i>
                         </label>
-                        <a href="#"><span class="logo">Dark Code</span></a>
+                        <a href="#"><span class="logo">Yoasobi</span></a>
                         <button type="submit" class="search-btn-sp">
                             <i class="fas fa-search "></i>
                         </button>
