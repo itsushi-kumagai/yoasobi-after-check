@@ -20,7 +20,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/register', 'Auth\AdminRegisterController@showRegisterForm')->name('admin.register');
     Route::post('/register', 'Auth\AdminRegisterController@register')->name('admin.register');
     Route::POST('/logout', 'Auth\AdminController@logout')->name('admin.logout');
-    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard')->middleware('auth:admin');
     Route::resource('categories','CategoriesController');
     Route::resource('posts', 'PostsController');
     Route::resource('tags','TagsController');
@@ -38,7 +38,7 @@ Route::prefix('admin')->group(function(){
 });
 
 
-//Route::get('/home', 'LandingPageController@index')->middleware('verified');
+Route::get('/home', 'LandingPageController@index')->middleware('verified');
 Route::get('/', 'AuthLPController@index')->name('home.show');
 
 Route::get('/verified', 'HomeController@verify');
