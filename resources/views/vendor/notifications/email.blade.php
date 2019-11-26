@@ -66,7 +66,7 @@
         .main-table {
           width: 100%;
           height: 80vh;
-          background-image: url({{url('./email/chris-slupski-tCM6cQjIQ7Q-unsplash.jpg')}});
+          background-image: url({{url('./email/andre-benz-Mn9Fa_wQH-M-unsplash.jpg')}});
           background-size: cover;
           background-repeat: no-repeat;
         }
