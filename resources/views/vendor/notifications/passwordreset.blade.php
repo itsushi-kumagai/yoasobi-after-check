@@ -11,6 +11,9 @@
 </head>
 <body>
     <style>
+  .logo {
+    line-height: 30px;
+  }
   .prompt {
     height: 130vh;
     width: 0 auto;
@@ -183,7 +186,7 @@
               </div> 
           </div>
           <footer>
-            <div class="footer-area">@2019 DARK CODE</div>
+            <div class="footer-area"><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></div>
         </footer>     
       </div>
   </section>

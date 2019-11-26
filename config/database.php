@@ -40,7 +40,11 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
+<<<<<<< HEAD
             'database' => env('DB_DATABASE', 'yoasobi'),
+=======
+            'database' => env('DB_DATABASE', 'night'),
+>>>>>>> bba8e8af1342c1359a023d79a98682eaf9002e3b
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', 'root'),
             'unix_socket' => env('DB_SOCKET', '/Applications/MAMP/tmp/mysql/mysql.sock'),

@@ -7,8 +7,8 @@ use App\Post;
 
 class AuthLPController extends Controller
 {
-
    
+    
    
     public function index(Post $post)
     {

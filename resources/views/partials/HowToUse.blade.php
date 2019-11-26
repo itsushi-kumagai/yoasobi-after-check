@@ -24,7 +24,7 @@
         </div>
 
         <div class="use_contents">        
-            <img src="../../LPImages/phone image 3@2x.png" alt="event search page image">
+            <img src="../../LPImages/phone image 3.png" alt="event search page image">
                 <div class="Description">
                     <h3><span style="color: #F70661; margin-right: 1rem;">●</span>Find events</h3>
                     <p>Save your favorite events</p>
@@ -38,7 +38,7 @@
                     <h3><span style="color: #F70661; margin-right: 1rem;">●</span>Chat with others</h3>
                     
                 </div>
-                <img src="../../LPImages/phone image 4@2x.png" alt="chat image">
+                <img src="../../LPImages/phone image 4.png" alt="chat image">
         </div>
     </div>   
     @if(Auth::check())

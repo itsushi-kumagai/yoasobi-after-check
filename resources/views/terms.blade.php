@@ -40,7 +40,6 @@
           <span class="terms"><a href="{{ route('terms.show') }}">Terms of service</span>
               <small class="copyright">Copyright 2019- yoasobi All Rights Reserved.</small>
       </div>
-      </footer>
     </footer>
 </body>
 </html>
