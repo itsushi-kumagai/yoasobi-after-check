@@ -399,16 +399,17 @@
 </div>
     <footer>
         <div class="footer">
-            <span class="follow">Follow Us Now !! #yoasobi</span>
+            <!-- <div class="follow">Follow Us Now !! #yoasobi</div>
             <div class="social">
-                <a href="" target="_blank"><img src="{{asset('social link/001-facebook.svg')}}" width="32" height="32" alt="facebook link"></a>
-                <a href="" target="_blank"><img src="{{asset('social link/011-instagram.svg')}}" width="32" height="32" alt="instagram link"></a>
-                <a href="" target="_blank"><img src="{{asset('social link/013-twitter-1.svg')}}" width="32" height="32" alt="twitter link"></a>
-            </div>
-            <span class="terms"><a href="{{ route('terms.show') }}">Terms of service</a></span>
-                <small class="copyright">Copyright 2019- yoasobi All Rights Reserved.</small>
+                <div class="sns-box"><a href="" target="_blank"><img src="{{asset('social link/facebook.svg')}}" width="25" height="25" alt="facebook link"></a></div>
+                <div class="sns-box"><a href="" target="_blank"><img src="{{asset('social link/instagram-logo.svg')}}" width="25" height="25" alt="instagram link"></a></div>
+                <div class="sns-box"><a href="" target="_blank"><img src="{{asset('social link/twitter.svg')}}" width="25" height="25" alt="twitter link"></a></div> 
+            </div> -->
+            <div class="terms"><a href="{{ route('terms.show') }}">Terms of service</a></div>
+                <small class="copyright">©︎ 2019- yoasobi All Rights Reserved.</small>
         </div>
     </footer>
+
     <script src="{{ asset('/js/previewImg.js') }}"></script>
     <script src="{{ asset('/js/cleave.min.js') }}"></script>
     <script src="{{ asset('/js/cleave.js') }}"></script>

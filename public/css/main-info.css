@@ -61,11 +61,6 @@
   padding: 20px 0;
 }
 
-.footer {
-  margin-top: 10vh;
-  height: 50vh;
-  background-color: #2D2524;
-}
 
 #header {
   height: 50px;
@@ -539,34 +534,57 @@ a {
   color: white;
 }
 
+.footer {
+  width: 100%;
+  background-color: #2D2524;
+  justify-content: center;
+}
+
 .follow {
-  color: white;
-  font-size: 24px;
-  margin-left: 3rem;
+color: white;
+font-size: 24px;
+padding: 2rem 0px 1rem;
+text-align: center;
 }
 
 .social {
-  margin-left: 4rem;
-}
+justify-content: center;
+display: flex;
 
+}
+.sns-box{
+position: relative;
+width: 45px;
+height: 45px;
+background: #ffffff;
+border-radius: 50%;
+margin: 10px;
+}
 .social img {
-  margin: 0.5rem;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateY(-50%) translateX(-50%); 
 }
-
+.terms{
+  padding: 20px 0 0 0;
+  text-align: center;
+}
 .terms a {
-  color: white;
-  text-decoration: none;
-  float: right;
-  margin-top: 10rem;
-  margin-bottom: 2rem;
-  font-size: 12px;
+color: white;
+text-decoration: none;
+font-size: 12px;
+
 }
 
 small {
-  justify-content: center;
-  display: flex;
-  color: white;
-  width: 100%;
+justify-content: center;
+display: flex;
+color: white;
+width: 100%;
+}
+.copyright{
+padding: 20px 0px;
 }
 /*# sourceMappingURL=main.css.map */
 
@@ -582,15 +600,6 @@ small {
 
 
 
-
-@media screen and (max-width: 1024px) {
-  .footer {
-    height: 33vh;
-    width: 100%;
-    background-color: #2D2524;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .logo {
     position: absolute;
@@ -599,12 +608,6 @@ small {
     width: 173px;
   }
   
-  .footer {
-    height: 50vh;
-    width: 100%;
-    background-color: #2D2524;
-  }
-
   .event-title h1{
     font-size: 26px;
   }
@@ -1040,24 +1043,21 @@ small {
       width: 60%;
     }
 
+    .footer {
+      width: 100%;
+      background-color: #2D2524;
+    }
+  
     .follow {
-      margin-left: 1rem;
       font-size: 15px;
       font-weight: bold;
     }
-  
-    .social {
-      margin-left: 2rem;
-    }
-  
     .terms a {
       color: white;
       text-decoration: none;
-      margin-left: 0.5rem;
-      margin-top: 8rem;
-      margin-bottom: 2rem;
       font-size: 12px;
     }
+  
   
 
 
