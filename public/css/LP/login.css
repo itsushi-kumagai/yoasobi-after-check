@@ -2,13 +2,6 @@
 @import "./card";
 @import "./category";
 @import "./howtouse";*/
-#email {
-  width: 100%;
-}
-
-#password {
-  width: 100%;
-}
 
 .login {
   background: url("../../LPImages/danny-howe-bn-D2bCvpik-unsplash.jpg");
@@ -29,6 +22,8 @@
 }
 
 .login-base {
+  width: 60%;
+  padding-bottom: 5rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -55,7 +50,7 @@
 .login-erea input {
   color: #ffffff;
   padding: 5px 10px;
-  width: 350px;
+  width: 60%;
   height: 25px;
   border-radius: 30px;
   border: solid 3px #ffffff;
@@ -86,7 +81,7 @@
   color: white;
   margin-top: 10px;
   border-radius: 30px;
-  font-size: 24px;
+  font-size: 20px;
   padding: 4px 20px 4px 20px;
   border: 0;
   cursor: pointer;
@@ -112,7 +107,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2rem 0 0.5rem;
+          margin: 1.8rem 0 1.8rem;
 }
 
 .sns-icon {
@@ -133,6 +128,16 @@
           transform: translateX(-50%) translateY(-50%);
 }
 
+@media screen and (max-width: 767px) {
+  .login-base {
+    width: 100%;
+  }
+
+.forgot a {
+  font-size: 14px;
+}
+}
+
 /*@import "./footer";
 @import "./footer";*/
 * {
@@ -149,12 +154,12 @@ h2 {
   color: white;
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 38px;
+  font-size: 25px;
 }
 
 h3 {
   color: white;
-  font-size: 33px;
+  font-size: 25px;
 }
 
 h4 {
@@ -185,13 +190,5 @@ h4 {
 
 .goo a {
   color: white;
-}
-
-#email {
-  width: 90%;
-}
-
-#password {
-  width: 90%;
 }
 /*# sourceMappingURL=main.css.map */

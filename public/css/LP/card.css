@@ -93,7 +93,7 @@ h2 {
 .showmore a{
   color: white;
   border-radius: 30px;
-  font-size: 24px;
+  font-size: 20px;
   padding: 4px 20px 4px 20px;
   border:0;
   cursor: pointer;
@@ -113,7 +113,6 @@ h2 {
       margin-top: 3rem;
       font-size: 25px;
     }
-    
     .card-info {
       color: white;
       font-size: 18px;

@@ -26,14 +26,14 @@
 .category-image {
   overflow: hidden;
   border-radius: 50%;
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   border: solid #ffffff 1px;
 }
 
 .category-image img {
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -48,7 +48,7 @@
           transform: scale(1.1, 1.1);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
   .category-card {
     display: block;
     padding: 0px;

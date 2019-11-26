@@ -16,10 +16,15 @@
             <div class="prompt-erea">
                 <div class="prompt-contents">
                     <div class="prompt-inner">
-                       
+
                         <h2>{{ __('Login') }}</h2>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
+                            <div class="sns-icon-erea">
+                                <div class="sns-icon face"><a href="{{url('login/facebook')}}"><i class="fab fa-facebook-f"></i><a></div>
+                                <div class="sns-icon twi"><a href="{{url('login/facebook')}}"><i class="fab fa-twitter"></i></a></div>
+                                <div class="sns-icon goo"><a href="{{url('login/google')}}" ><i class="fab fa-google"></i></a></div>
+                            </div>
                             <div class="text-box">
                                 <div class="text">
                                     <label for="name">{{ __('E-Mail Address') }}</label>
@@ -46,11 +51,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="sns-icon-erea">
-                                <div class="sns-icon face"><a href="{{url('login/facebook')}}"><i class="fab fa-facebook-f"></i><a></div>
-                                <div class="sns-icon twi"><a href="{{url('login/facebook')}}"><i class="fab fa-twitter"></i></a></div>
-                                <div class="sns-icon goo"><a href="{{url('login/google')}}" ><i class="fab fa-google"></i></a></div>
-                            </div>
+
                         
                         <!--<input type="button" value="Login" class="btn1">--->
                         <button type="submit" class="btn1">
