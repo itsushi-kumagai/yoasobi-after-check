@@ -14,6 +14,7 @@
 .recomend-container {
   position: relative;
   z-index: 1001;
+  margin-bottom: 100px;
 }
 
 #header-container {
@@ -47,12 +48,11 @@
 }
 
 .comments {
-  width: 90%;
-  margin-left: 20px;
-  border-top: solid  gray 1px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-top: solid 1px #ffffff;
 }
 .user-comment {
   display: -webkit-box;
@@ -586,6 +586,23 @@ width: 100%;
 .copyright{
 padding: 20px 0px;
 }
+
+.detail-content{
+  background: #2D2524;
+  padding: 30px;
+  margin: 30px 20px;
+  
+}
+
+.detail-content-list{
+  list-style: none;
+}
+.detail-content-list li{
+  padding: 8px 0;
+}
+.detail-content-list li a{
+  border-bottom: solid 1px #fff;
+}
 /*# sourceMappingURL=main.css.map */
 
 /*.content {
@@ -601,6 +618,11 @@ padding: 20px 0px;
 
 
 @media screen and (max-width: 767px) {
+  .detail-content{
+    width: 80%;
+    margin: 0 auto 30px;
+    padding: 20px;
+  }
   .logo {
     position: absolute;
     left: 50%;
@@ -612,8 +634,7 @@ padding: 20px 0px;
     font-size: 26px;
   }
   .organizer-name {
-    margin-top: 60px;
-    margin-left: 0px;
+    margin: 60px 0px 0px 20px;
   }
   .recomend-container h2{
     text-align: center;
@@ -1057,7 +1078,6 @@ padding: 20px 0px;
       text-decoration: none;
       font-size: 12px;
     }
-  
   
 
 

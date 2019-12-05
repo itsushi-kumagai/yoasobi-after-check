@@ -187,7 +187,27 @@
             <p>
             {{ $posts['particular_post']->description }}
             </p>
+            <div class="detail-content">
+                <ul class="detail-content-list">
+                    <li>●　Charge  :  Man  ¥3000  woman  ¥1500</li>
+                    <li>●　Ticket  :  <a href="#">aforeign peopleasdf fs sdfgsdf asgkenr shdbcksckdc nsa</a></li>
+                    <li>●　Coupon  :  <a href="#">vdfdfvdfbsdfbsdfbsd dfbsdf dfbsdfb sdfbsdfvvdfdfvdfbsd</a></li>
+                </ul>
+            </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="comments">
             <div class="organizer-name">
                 Organizer:<h3><a href="{{ $posts['particular_post']->organizer_link }}" target="_blank">{{ $posts['particular_post']->organizer }}</a></h3>
