@@ -189,9 +189,12 @@
             </p>
             <div class="detail-content">
                 <ul class="detail-content-list">
-                    <li>●　Charge  :  Man  ¥3000  woman  ¥1500</li>
-                    <li>●　Ticket  :  <a href="#">aforeign peopleasdf fs sdfgsdf asgkenr shdbcksckdc nsa</a></li>
-                    <li>●　Coupon  :  <a href="#">vdfdfvdfbsdfbsdfbsd dfbsdf dfbsdfb sdfbsdfvvdfdfvdfbsd</a></li>
+                    
+                    <li>●　Ticket</li>
+                    <li>Man : <a href="#">aforeign peopleasdf fs sdfgsdf asgkenr shdbcksckdc nsa</a></li>
+                    <li>Woman : <a href="#">aforeign peopleasdf fs sdfgsdf asgkenr shdbcksckdc nsa</a></li>
+                    <li>●　Coupon</li>
+                    <li>  :  <a href="#">vdfdfvdfbsdfbsdfbsd dfbsdf dfbsdfb sdfbsdfvvdfdfvdfbsd</a></li>
                 </ul>
             </div>
         </div>

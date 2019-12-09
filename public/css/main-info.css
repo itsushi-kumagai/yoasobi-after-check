@@ -526,7 +526,7 @@ h2 {
 
 body {
   background-color: black;
-  font-family: 'Nuito';
+  font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -1041,6 +1041,8 @@ padding: 20px 0px;
       margin: 30px auto;
       width: 90%;
       font-size: 16px;
+      line-height: 1.6rem;
+      letter-spacing: 0.2px;
     }
     .user-comment {
       padding: 15px ;
@@ -1078,7 +1080,9 @@ padding: 20px 0px;
       text-decoration: none;
       font-size: 12px;
     }
-  
+    .fa-link {
+      display: none;
+    }
 
 
 }

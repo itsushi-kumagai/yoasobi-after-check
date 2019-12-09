@@ -1,6 +1,6 @@
 <div class="container">
 <section id="header-container">
-        <div id="header" >
+        <div id="header">
             <a href="{{ route('home.show') }}"><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
             <input type="checkbox" id="chk">
             <label for="chk" class="show-menu-btn">
@@ -42,7 +42,9 @@
 
 
    
-<div class="header2"></div>
+<div class="header2">
+  
+</div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
         <div class="spinner diagonal part-1"></div>
@@ -101,7 +103,7 @@
                 </div>
                 <button type="submit" class="test">
                     <i class="fas fa-search "></i>
-                </button>   
+                </button>    
         </form>
 
 
