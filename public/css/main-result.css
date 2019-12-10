@@ -354,7 +354,7 @@
 
 .date {
   color: #FF8800;
-  margin: 5px 5px 8px 5px;
+  margin: 5px 0px;
   font-size: 17px;
 }
 
@@ -412,6 +412,7 @@
 
 .page a {
   color: white;
+  font-size: 14px;
   margin: 15px;
 }
 
@@ -488,39 +489,77 @@ width: 100%;
 padding: 20px 0px;
 }
 
+#sidebarSearch {
+  display: none;
+}
+.sidebarIconSearch i{
+  display: none;
+}
+#sidebarMenu {
+  display: none;
+}
+.openSidebarSearch {
+  display: none;
+}
+.openSidebarMenu {
+  display: none;
+}
+.sp-logo{
+  display: none;
+}
 
 
 
 
 
 @media screen and (max-width: 767px) {
+
+  #sidebarSearch {
+    display: block;
+  }
+  .sidebarIconSearch i{
+    display: block;
+  }
+  #sidebarMenu {
+    display: block;
+  }
+  .openSidebarSearch {
+    display: block;
+  }
+  .openSidebarMenu {
+    display: block;
+  }
+  .sp-logo{
+    display: block;
+  }
+  
   .logo {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     width: 173px;
+    z-index: 101;
+    position: fixed;
   }
-  
-  .fav-icon-after {
-    background-color: black;
-    border: none;
-    cursor: pointer;
+  .container {
+    display: block;
   }
-
-  .no-results {
-    margin-top: 20rem;
-    padding-bottom: 10rem;
-    text-align: center;
-    color: white;
-    font-size: 15px;
+  .background-img h1 {
+    width: 100%;
+    padding: 15px 0px;
+    top: 55%;
+    left: 50%;
+    font-size: 36px;
   }
-
   .test {
     margin-top: 2rem;
     font-size: 1rem;
   }
-
   #header {
+    display: none;
+  }
+  .search {
     display: none;
   }
   .header2 {
@@ -528,24 +567,27 @@ padding: 20px 0px;
     width: 100%;
     max-width: 100%;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     position: fixed;
     height: 50px;
     background: #2D2524;
     overflow: hidden;
     z-index: 100;
   }
+  .background-img {
+    width: 100%;
+  }
   .main {
     margin: 0 auto;
     display: block;
     height: 100%;
+    margin-top: 60px;
   }
   .mainInner {
     display: table;
     height: 100%;
     width: 100%;
     text-align: center;
-    margin-top: 5rem;
   }
   .mainInner div {
     display: table-cell;
@@ -561,7 +603,7 @@ padding: 20px 0px;
     width: 100%;
     margin-top: 50px;
     -webkit-transform: translateX(1500px);
-            transform: translateX(1500px);
+    transform: translateX(1500px);
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
     transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
@@ -570,63 +612,25 @@ padding: 20px 0px;
     color: #fff;
     position: fixed;
     text-align: center;
+    z-index: 100;
   }
   .sidebarIconSearch i {
     color: #fff;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     cursor: pointer;
     position: absolute;
-    top: 16px;
-    right: 25px;
-    z-index: 99;
-    font-size: 20px;
-  }
-  input[type="checkbox"]:checked ~ #sidebarSearch {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  input[type="checkbox"]:checked ~ #sidebarSearch ~ .sidebarIconToggle {
-    display: none;
-  }
-  .openSidebarSearch {
-    float: right;
-  }
-  #sidebarSearch {
-    position: relative;
-    height: 100%;
-    left: 0;
-    width: 100%;
-    margin-top: 50px;
-    -webkit-transform: translateX(1500px);
-            transform: translateX(1500px);
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    transition: -webkit-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
-    background: #000000;
-    color: #fff;
     position: fixed;
-    text-align: center;
-  }
-  .sidebarIconSearch i {
-    color: #fff;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    cursor: pointer;
-    position: absolute;
     top: 16px;
     right: 25px;
-    z-index: 99;
+    z-index: 101;
     font-size: 20px;
   }
   input[type="checkbox"]:checked ~ #sidebarSearch {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   input[type="checkbox"]:checked ~ #sidebarSearch ~ .sidebarIconToggle {
     display: none;
@@ -654,8 +658,8 @@ padding: 20px 0px;
     color: #000000;
     margin: 0;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -669,10 +673,10 @@ padding: 20px 0px;
     height: 24px;
     width: 80px;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -684,11 +688,11 @@ padding: 20px 0px;
     height: 80px;
     border-radius: 50%;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -707,14 +711,25 @@ padding: 20px 0px;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   }
-
+  .Genre {
+    color: #fff;
+    background: none;
+    padding-left: 5px;
+    border: solid 2px #fff;
+    font-size: 11px;
+    line-height: 30px;
+    width: 24%;
+    height: 34px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
   #select {
     width: 60%;
   }
-
   .Day-box {
     outline: none;
     height: 30px;
@@ -734,28 +749,28 @@ padding: 20px 0px;
     left: 0;
     margin-top: 50px;
     -webkit-transform: translateX(-1500px);
-            transform: translateX(-1500px);
+    transform: translateX(-1500px);
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
     transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
     background: #000000;
+    z-index: 102;
   }
-  
   .sidebarMenuInner {
-    display:table-cell;
-    vertical-align:middle;
     position: absolute;
     text-align: center;
     top: 40%;
     left: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
-            transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
     margin: 0;
     padding: 0;
+    display: block;
+   
   }
   .sidebarMenuInner li {
-   justify-content: center;
+    text-align: center;
     list-style: none;
     color: #fff;
     text-transform: uppercase;
@@ -763,8 +778,8 @@ padding: 20px 0px;
     font-size: 20px;
     padding: 30px;
     cursor: pointer;
+    justify-content: center;
   }
-
   .sidebarMenuInner li a {
     color: #fff;
     text-transform: uppercase;
@@ -772,10 +787,9 @@ padding: 20px 0px;
     cursor: pointer;
     text-decoration: none;
   }
-
   input[type="checkbox"]:checked ~ #sidebarMenu {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   input[type="checkbox"]:checked ~ #sidebarMenu ~ .sidebarIconSearch {
     display: none;
@@ -787,17 +801,18 @@ padding: 20px 0px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     display: none;
   }
   .sidebarIconToggle {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     cursor: pointer;
     position: absolute;
-    z-index: 99;
+    position: fixed;
+    z-index: 101;
     height: 100%;
     width: 100%;
     top: 18px;
@@ -809,7 +824,7 @@ padding: 20px 0px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     position: absolute;
     height: 3px;
     width: 100%;
@@ -819,7 +834,7 @@ padding: 20px 0px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     position: relative;
     float: left;
     margin-top: 3px;
@@ -829,14 +844,14 @@ padding: 20px 0px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     float: left;
   }
   .diagonal.part-2 {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     position: relative;
     float: left;
     margin-top: 3px;
@@ -845,28 +860,36 @@ padding: 20px 0px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     opacity: 0;
   }
   input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
     margin-top: 8px;
   }
   input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg);
+    transform: rotate(-135deg);
     margin-top: -9px;
   }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
 
+body {
+  background-color: black;
+}
 
   .card a img {
         position: relative;
@@ -878,16 +901,25 @@ padding: 20px 0px;
 .fav-icon-after{
     float: right;
     display: block;
+    background-color: black;
+    border: none;
+    cursor: pointer;
 }    
+
+
+.no-results {
+  margin-top: 20rem;
+  padding-bottom: 10rem;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
 
 
 .results{
     margin: 1rem auto;
     padding: 20px 0;
     text-align: center;
-}
-.results:first-of-type{
-    padding: 50px 20px 0 20px;
 }
 .contents {
     display: block;
@@ -908,9 +940,6 @@ padding: 20px 0px;
 
 .title-link {
   font-size: 20px;
-}
-.date{
-    margin: 5px 0;
 }
 
 .fav-icon  i{
@@ -946,5 +975,14 @@ padding: 20px 0px;
       text-decoration: none;
       font-size: 12px;
     }
-  
+    .page {
+      margin-top: 2rem;
+      margin-bottom: 30px;
+    }
+    
+    .page a {
+      color: white;
+      margin: 15px;
+    }
 }
+

@@ -308,7 +308,7 @@ input[type="file"] {
   display: none;
 }
 
-label {
+.Change-image {
   color: white;
   color: white;
   margin-top: 10px;
@@ -391,6 +391,7 @@ label {
 }
 
 select {
+
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: 26px;
@@ -489,7 +490,48 @@ padding: 20px 0px;
 }
 /*# sourceMappingURL=main.css.map */
 
+
+
+#sidebarSearch {
+  display: none;
+}
+.sidebarIconSearch i{
+  display: none;
+}
+#sidebarMenu {
+  display: none;
+}
+.openSidebarSearch {
+  display: none;
+}
+.openSidebarMenu {
+  display: none;
+}
+.sp-logo{
+  display: none;
+}
+
+
 @media screen and (max-width: 768px) {
+
+  #sidebarSearch {
+    display: block;
+  }
+  .sidebarIconSearch i{
+    display: block;
+  }
+  #sidebarMenu {
+    display: block;
+  }
+  .openSidebarSearch {
+    display: block;
+  }
+  .openSidebarMenu {
+    display: block;
+  }
+  .sp-logo{
+    display: block;
+  }
   .logo {
     position: absolute;
     left: 50%;
@@ -510,7 +552,6 @@ padding: 20px 0px;
     height: 50px;
     background: #2D2524;
     overflow: hidden;
-    z-index: 100;
   }
   .main {
     margin: 0 auto;
@@ -768,8 +809,8 @@ padding: 20px 0px;
     width: 100%;
     top: 18px;
     left: 20px;
-    height: 30px;
-    width: 30px;
+    height: 22px;
+    width: 22px;
     background: none;
   }
   .spinner {
@@ -854,7 +895,7 @@ padding: 20px 0px;
     }
 select{
     margin: 10px 15px 10px 0;
-    width: 100%;
+    width: 60%;
 }
 
 .image-preview{

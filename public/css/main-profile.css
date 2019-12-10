@@ -377,14 +377,12 @@
   font-size: 15px;
   letter-spacing: 1px;
   width: 30rem;
-  height: 30px;
   margin-top: 10px;
   list-style: none;
 }
 
 .description p {
-  margin-top: 15px;
-  margin-left: 1rem;
+  margin: 15px 0 2rem 1rem;
   letter-spacing: 1px;
 }
 
@@ -620,6 +618,25 @@ width: 100%;
 padding: 20px 0px;
 }
 
+#sidebarSearch {
+  display: none;
+}
+.sidebarIconSearch i{
+  display: none;
+}
+#sidebarMenu {
+  display: none;
+}
+.openSidebarSearch {
+  display: none;
+}
+.openSidebarMenu {
+  display: none;
+}
+.sp-logo{
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
 /*.content {
     padding: o 20px;
@@ -633,6 +650,25 @@ padding: 20px 0px;
 
 
 @media screen and (max-width: 800px) {
+
+  #sidebarSearch {
+    display: block;
+  }
+  .sidebarIconSearch i{
+    display: block;
+  }
+  #sidebarMenu {
+    display: block;
+  }
+  .openSidebarSearch {
+    display: block;
+  }
+  .openSidebarMenu {
+    display: block;
+  }
+  .sp-logo{
+    display: block;
+  }
   .logo {
     position: absolute;
     left: 50%;
@@ -678,7 +714,7 @@ padding: 20px 0px;
     height: 50px;
     background: #2D2524;
     overflow: hidden;
-    z-index: 100;
+
   }
   .main {
     margin: 0 auto;

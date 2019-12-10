@@ -23,7 +23,7 @@ li {
     height: 30px;
     width: 30px;
     margin-top: 11px;
-    background-color: grey;
+    background-color: #8a8a8a;
 }
 
 .page-link {
@@ -33,8 +33,12 @@ li {
 
 @media screen and (max-width: 800px) {
     .page {
-        margin-top: 5rem;
-        font-size: 9px;
+        margin-top: 2rem;
+        font-size: 14px;
         text-align: center;
+    }
+    .page-link {
+        color: white;
+        margin: 0 auto;
     }
 }

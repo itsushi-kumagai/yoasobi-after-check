@@ -61,38 +61,74 @@
                 <input type="checkbox" id="chk">
             </div>
         </div>
-        <div class="header2">
-            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-            <label for="openSidebarMenu" class="sidebarIconToggle">
-                <div class="spinner diagonal part-1"></div>
-                <div class="spinner horizontal"></div>
-                <div class="spinner diagonal part-2"></div>
-            </label>
-            <div id="sidebarMenu">
-                <ul class="sidebarMenuInner">
-                    <li><a href="{{ route('home.show') }}">Home</a></li>
-                    @if(Auth::check())
-                    <li><a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                            Logout</a></li>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                    @else
-                    <li><a href="/login">Login</a></li>
-                    @endif
-                    <li><a href="{{ route('posts.result') }}">Events</a></li>
-                    {{-- <li><a href="#">Log in</a></li>
-                    <li><a href="#">Log out</a></li> --}}
-                    @if(Auth::check())
-                        <li><a href="/user/profile">Profile</a></li> 
-                    @else
-                        <li><a href="/register">Register</a></li>
-                    @endif
-                </ul>
-            </div>
-            <a href="{{ route('home.show') }}""><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
-        </div>
+
+
+       
+    <div class="header2">
+  
+  </div>
+      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+      <label for="openSidebarMenu" class="sidebarIconToggle">
+          <div class="spinner diagonal part-1"></div>
+          <div class="spinner horizontal"></div>
+          <div class="spinner diagonal part-2"></div>
+      </label>
+      <div id="sidebarMenu">
+          <ul class="sidebarMenuInner">
+              <li><a href="{{ route('home.show') }}">Home</a></li>
+              @if(Auth::check())
+              <li><a href="{{ route('logout') }}"
+                  onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                      Logout</a></li>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+              @else
+              <li><a href="/login">Login</a></li>
+              @endif
+              <li><a href="{{ route('posts.result') }}">Events</a></li>
+              {{-- <li><a href="#">Log in</a></li>
+              <li><a href="#">Log out</a></li> --}}
+              @if(Auth::check())
+                  <li><a href="/user/profile">Profile</a></li> 
+              @else
+                  <li><a href="/register" >Register</a></li>
+              @endif
+          </ul>
+      </div>
+  
+      <a href="{{ route('home.show') }}"><img src="{{asset('logo/yoasobi.png')}}" class="logo sp-logo" alt="logo-smartphone"></a>
+      <input type="checkbox" class="openSidebarSearch" id="openSidebarSearch">
+      <label for="openSidebarSearch" class="sidebarIconSearch sp-check">
+          <i class="fas fa-search search_icon"></i>
+      </label>
+      <div id="sidebarSearch">
+          <form action="{{ route('posts.result') }}"  method="GET">
+              <div class="search-area">
+                  <div class="search-title">Enter the name of event</div>
+                      <input type="text" class="search_text" name="description">
+              </div>
+                  <div class="search-erea">
+                      <div class="search-title">Categories</div>
+                      <div class="Category-list">
+                          <select name="category_id" id="select" class="Genre">
+                              <option value="" hidden>Category</option>
+                              @foreach(App\Category::all() as $category)
+                              <option value="{{$category->id}}">{{$category->name}}</option>
+                              @endforeach
+                          </select>
+                      </div>
+                  </div>
+                  <div class="search-area">
+                      <div class="search-title">Day</div>
+                      <input type="text" id="date_search" class="Day-box" name="date" >
+                  </div>
+                  <button type="submit" class="test">
+                      <i class="fas fa-search "></i>
+                  </button>    
+          </form>
+
+      </div>
         </section>
     <div class="content">
         <div class="userinfo">
@@ -110,7 +146,7 @@
                 @csrf
         <div class="preview">
                 <input type="file" id="file" accept="image/*" name="image">
-            <label for="file">
+            <label for="file" class="Change-image">
                 Change Image
             </label>
         </div>

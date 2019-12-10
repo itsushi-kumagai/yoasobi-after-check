@@ -126,25 +126,25 @@
     </div>
 
 <div class="background-img"> 
-<div class="background-img-msk">
-<h1 class="first-view-text" >Night Life in Japan</h1>
-<div class="main_search">
-    <div class="seach-area">
-        <form action="{{ route('posts.result') }}" class="search" method="GET">
-            <input type="text" name="description" class="search_text" placeholder="Enter the key words">
-            <select name="category_id"  class="Genre">
-                <option value="" hidden>Category</option>
-                @foreach(App\Category::all() as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
-                @endforeach
-            </select>
-            <input type="text" name="date" class="search_date" id="date-box" placeholder="Choose date">
-            <button type="submit" class="test">
-                <i class="fas fa-search search_icon"></i>
-            </button>
-        </form>
+    <div class="background-img-msk">
+        <h1 class="first-view-text" >Night Life in Japan</h1>
+        <div class="main_search">
+            <div class="seach-area">
+                <form action="{{ route('posts.result') }}" class="search" method="GET">
+                    <input type="text" name="description" class="search_text" placeholder="Enter the key words">
+                    <select name="category_id"  class="Genre">
+                    <option value="" hidden>Category</option>
+                    @foreach(App\Category::all() as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                    </select>
+                    <input type="text" name="date" class="search_date" id="date-box" placeholder="Choose date">
+                    <button type="submit" class="test">
+                        <i class="fas fa-search search_icon"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
-</div>
 </div>
 
