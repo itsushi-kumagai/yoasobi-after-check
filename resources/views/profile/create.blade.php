@@ -415,7 +415,7 @@
                             <option value="Zimbabwe">Zimbabwe</option>
                     </select>
                 </div>    
-            </li><br>
+            </li>
             <li>Birthday :<br>
                 <input type="text" class="birthday" id="bod" name="bod" 
                 value="@if(!empty(Auth::user()->profile->bod)){{ Auth::user()->profile->bod }}@endif">
