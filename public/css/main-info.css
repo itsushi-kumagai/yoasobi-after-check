@@ -167,17 +167,16 @@
 }
 
 .Genre {
-  color: #fff;
+  outline: none;
+  height: 36px;
+  width: 68%;
+  border: solid 3px #fff;
   background: none;
-  padding-left: 5px;
-  border: solid 2px #fff;
-  font-size: 11px;
-  line-height: 30px;
-  width: 24%;
-  height: 34px;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-right: 10px;
+  border-radius: 30px;
+  color: #fff;
+  padding: 0 20px;
+  font-size: 16px;
+  margin: 0;
 }
 
 .Genre:focus {
@@ -336,6 +335,7 @@
   will-change: color;
   -webkit-transition: color 1s;
   transition: color 1s;
+  display: none;
 }
 
 .fa-link:hover {
@@ -403,6 +403,7 @@
   margin-top: 1rem;
   color: white;
   margin-bottom: 2px;
+  line-height: 2.3 ; 
 }
 
 .w3-tag {
@@ -471,6 +472,7 @@ h2 {
 }
 
 .link {
+  
   color: white;
 }
 
@@ -523,7 +525,6 @@ h2 {
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -882,7 +883,7 @@ padding: 20px 0px;
   .Day-box {
     outline: none;
     height: 30px;
-    width: 200px;
+    width: 60%;
     border: solid 3px #fff;
     background: none;
     border-radius: 30px;
@@ -1119,10 +1120,10 @@ padding: 20px 0px;
       text-decoration: none;
       font-size: 12px;
     }
-    .fa-link {
-      display: none;
-    }
 
+    .fa-link {
+      display: block;
+    }
 
 }
 
