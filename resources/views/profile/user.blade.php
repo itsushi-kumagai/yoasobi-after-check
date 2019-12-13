@@ -64,7 +64,10 @@
         <input type="checkbox" id="chk">
     </div>
 </div>
+
 <div class="header2">
+  
+</div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
         <div class="spinner diagonal part-1"></div>
@@ -94,36 +97,38 @@
             @endif
         </ul>
     </div>
-    <a href="{{ route('home.show') }}""><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo"></a>
+
+    <a href="{{ route('home.show') }}"><img src="{{asset('logo/yoasobi.png')}}" class="logo" alt="logo-smartphone"></a>
     <input type="checkbox" class="openSidebarSearch" id="openSidebarSearch">
     <label for="openSidebarSearch" class="sidebarIconSearch">
-    <i class="fas fa-search search_icon"></i>
+        <i class="fas fa-search search_icon"></i>
     </label>
-        <div id="sidebarSearch">
-            <div class="search-erea">
-             <form action="{{ route('posts.result') }}"  method="GET">
-            <div class="search-title">Enter the name of event</div>
-                <input type="text" class="search_text">
+    <div id="sidebarSearch">
+        <form action="{{ route('posts.result') }}"  method="GET">
+            <div class="search-area">
+                <div class="search-title">Enter the name of event</div>
+                    <input type="text" class="search_text" name="description">
             </div>
-            <div class="search-erea">
-                <div class="search-title">Categories</div>
-                <select name="category_id" id="select" class="Genre">
-                    <option value="" hidden>Category</option>
-                    @foreach(App\Category::all() as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="search-erea">
-                <div class="search-title">Day</div>
-                <input type="text" id="date-box" class="Day-box">
-            </div>
-            <button type="submit" class="test">
-                <i class="fas fa-search "></i>
-            </button>
-        </div>
+                <div class="search-erea">
+                    <div class="search-title">Categories</div>
+                    <div class="Category-list">
+                        <select name="category_id" id="select" class="Genre">
+                            <option value="" hidden>Category</option>
+                            @foreach(App\Category::all() as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="search-area">
+                    <div class="search-title">Day</div>
+                    <input type="text" id="date_search" class="Day-box" name="date" >
+                </div>
+                <button type="submit" class="test">
+                    <i class="fas fa-search "></i>
+                </button>    
+        </form>
     </div>
-</form>
 </section>
 
 <div class="content">
